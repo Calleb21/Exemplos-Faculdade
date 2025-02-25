@@ -1,0 +1,33 @@
+@Entity
+@Table(name = "pessoa")
+public class Pessoa {
+
+    @id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+
+    @OneToOne
+    @JoinColumn(name = "endereco_id",
+      referencedColumnName = "id")
+    private Endereco endereco;
+
+
+    // ... get and set
+}
+
+@Entity
+@Table(name = "endereco")
+public class Endereco {
+
+    @id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+
+    @OneToOne(mappedBy = "endereco")
+    private Pessoa pessoa ;
+
+
+    // ... get and set
+}
