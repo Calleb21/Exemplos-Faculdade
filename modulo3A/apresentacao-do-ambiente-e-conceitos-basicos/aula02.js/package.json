@@ -1,0 +1,11 @@
+{
+  "name": "mod2",
+  "version": "1.0.0",
+  "main": "aula02.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "calleb",
+  "license": "ISC",
+  "type": "module"
+}
